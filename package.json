@@ -1,9 +1,8 @@
 {
   "name": "ember-debug-logger",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An Ember addon to expose the Visionmedia debug logger.",
   "directories": {
-    "doc": "doc",
     "test": "tests"
   },
   "scripts": {
@@ -11,7 +10,10 @@
     "build": "ember build",
     "test": "ember try:testall"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/salsify/ember-debug-logger.git"
+  },
   "engines": {
     "node": ">= 0.10.0"
   },
