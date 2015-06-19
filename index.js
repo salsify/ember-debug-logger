@@ -6,7 +6,7 @@ module.exports = {
 
   included: function(app) {
     if (!app.import) {
-      throw new Error('ember-debug-logger does not currently support being used in addons');
+      throw new Error('ember-debug-logger does not currently support being used in addons.');
     }
 
     app.import(app.bowerDirectory + '/visionmedia-debug/dist/debug.js');
