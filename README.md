@@ -36,6 +36,11 @@ You can turn off all logging with `disable`:
 debug.disable();
 ```
 
+Namespaces will automatically be differentiated by color, and the time between messages will be logged.
+
+![image](https://cloud.githubusercontent.com/assets/108688/8263047/624cd006-16a5-11e5-9ba8-bd67d5ce5d7b.png)
+
+
 ### Automatic Namespacing
 
 By default, this addon will inject a `debug` method on to all routes, components, controllers, and services that are instantiated by your application's container. This method will automatically use its instance's container key as the namespace.
