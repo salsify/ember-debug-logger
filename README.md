@@ -1,4 +1,4 @@
-# ember-debug-logger
+# ember-debug-logger [![Build Status](https://travis-ci.org/salsify/ember-debug-logger.svg?branch=master)](https://travis-ci.org/salsify/ember-debug-logger)
 
 `ember-debug-logger` exposes the [visionmedia/debug](//github.com/visionmedia/debug) library for use in your Ember.js application.
 
