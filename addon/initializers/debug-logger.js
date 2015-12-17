@@ -1,6 +1,6 @@
 import debugLogger from 'ember-debug-logger/utils/debug-logger';
 
-export function initialize(container, app) {
+export function initialize(app) {
   app.register('debug-logger:main', debugLogger(), { instantiate: false });
 
   ['route', 'component', 'controller', 'service'].forEach(function(type) {
