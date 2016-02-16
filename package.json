@@ -1,7 +1,7 @@
 {
   "name": "ember-debug-logger",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.2.0",
+  "description": "An Ember addon to expose the Visionmedia debug logger.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,11 +11,14 @@
     "start": "ember server",
     "test": "ember try:testall"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/salsify/ember-debug-logger.git"
+  },
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Dan Freeman",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.2.0",
