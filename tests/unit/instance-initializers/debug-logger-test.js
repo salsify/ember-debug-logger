@@ -1,10 +1,10 @@
 import Ember from 'ember';
-import { initialize } from '../../../initializers/debug-logger';
+import { initialize } from '../../../instance-initializers/debug-logger';
 import { module, test } from 'qunit';
 
 var container, application;
 
-module('Unit | Initializer | debug logger', {
+module('Unit | Instance Initializer | debug logger', {
   beforeEach: function() {
     Ember.run(function() {
       application = Ember.Application.create();
@@ -17,7 +17,7 @@ module('Unit | Initializer | debug logger', {
 test('it registers the logger on the expected types', function(assert) {
   const TYPES = ['component', 'route', 'controller', 'service'];
 
-  initialize(container, application);
+  initialize(application);
 
   TYPES.forEach(function(type) {
     const key = `${type}:injection-test`;

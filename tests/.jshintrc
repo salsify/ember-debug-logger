@@ -26,7 +26,7 @@
   "node": false,
   "browser": false,
   "boss": true,
-  "curly": false,
+  "curly": true,
   "debug": false,
   "devel": false,
   "eqeqeq": true,
@@ -34,7 +34,7 @@
   "forin": false,
   "immed": false,
   "laxbreak": false,
-  "newcap": false,
+  "newcap": true,
   "noarg": true,
   "noempty": false,
   "nonew": false,
@@ -47,5 +47,6 @@
   "strict": false,
   "white": false,
   "eqnull": true,
-  "esnext": true
+  "esnext": true,
+  "unused": true
 }
