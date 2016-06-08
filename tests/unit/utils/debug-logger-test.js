@@ -1,7 +1,7 @@
 /* global sinon, debug */
 
 import Ember from 'ember';
-import debugLogger from 'ember-debug-logger';
+import { debugLogger } from 'ember-debug-logger';
 import { module, test } from 'qunit';
 
 const { A } = Ember;
