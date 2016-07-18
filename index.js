@@ -4,11 +4,20 @@
 module.exports = {
   name: 'ember-debug-logger',
 
-  included: function(app) {
-    if (!app.import) {
-      throw new Error('ember-debug-logger does not currently support being used in addons.');
-    }
+  init: function() {
+    this._super.init && this._super.init.apply(this, arguments);
 
-    app.import(app.bowerDirectory + '/visionmedia-debug/dist/debug.js');
+    var bowerDeps = this.project.bowerDependencies();
+    if (bowerDeps['visionmedia-debug']) {
+      this.ui.writeWarnLine('ember-debug-logger no longer requires the `visionmedia-debug` Bower package; please remove it.');
+    }
+  },
+
+  options: {
+    nodeAssets: {
+      'debug-dist': {
+        import: ['dist/debug.js']
+      }
+    }
   }
 };
