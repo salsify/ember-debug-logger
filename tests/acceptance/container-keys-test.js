@@ -1,6 +1,8 @@
-/* global sinon, debug */
+/* global debug */
+/* eslint no-console:off */
 
 import Ember from 'ember';
+import sinon from 'sinon';
 import { test } from 'qunit';
 import moduleForAcceptance from 'dummy/tests/helpers/module-for-acceptance';
 

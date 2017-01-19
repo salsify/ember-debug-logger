@@ -1,6 +1,8 @@
-/* global sinon, debug */
+/* global debug */
+/* eslint no-console:off */
 
 import Ember from 'ember';
+import sinon from 'sinon';
 import debugLogger from 'ember-debug-logger';
 import { module, test } from 'qunit';
 
@@ -21,7 +23,7 @@ module('Unit | Utility | debug logger', {
 test('it honors an explicit key', function(assert) {
   const logger = debugLogger('test:sample-key');
   logger('placeholder message');
-  
+
   let [message] = A(console.log.args).get('lastObject');
   assert.ok(/test:sample-key/.test(message), 'Log entry should contain the namespace');
   assert.ok(/placeholder message/.test(message), 'Log entry should contain the message');

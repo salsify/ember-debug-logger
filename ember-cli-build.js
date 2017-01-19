@@ -1,12 +1,10 @@
-/* jshint node: true */
+/* eslint-env node */
 /* global require, module */
 
 var EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function(defaults) {
   var app = new EmberAddon(defaults, {});
-
-  app.import({ test: 'bower_components/sinonjs/sinon.js' });
 
   return app.toTree();
 };
