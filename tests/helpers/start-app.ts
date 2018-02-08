@@ -1,8 +1,7 @@
-import App from 'dummy/app';
-import config from 'dummy/config/environment';
 import { merge } from '@ember/polyfills';
 import { run } from '@ember/runloop';
-import { TestContext } from 'ember-test-helpers';
+import App from 'dummy/app';
+import config from 'dummy/config/environment';
 
 export default function startApp(attrs?: any): App {
   let attributes = merge({}, config.APP);

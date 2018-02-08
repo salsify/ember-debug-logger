@@ -1,7 +1,7 @@
 import { A } from '@ember/array';
-import sinon, { SinonStub } from 'sinon';
 import debugLogger from 'ember-debug-logger';
 import { module, test } from 'qunit';
+import sinon, { SinonStub } from 'sinon';
 
 let log: SinonStub;
 
@@ -14,7 +14,7 @@ module('Unit | Utility | debug logger', {
   afterEach() {
     debug.disable();
     log.restore();
-  }
+  },
 });
 
 test('it honors an explicit key', function(assert) {

@@ -9,6 +9,7 @@
   "scripts": {
     "build": "ember build",
     "lint:js": "eslint .",
+    "lint:ts": "tslint -p tsconfig.json -c tslint.json --exclude '**/*.js'",
     "start": "ember server",
     "test": "ember try:each",
     "prepublishOnly": "ember ts:precompile",
@@ -49,6 +50,7 @@
     "eslint-plugin-ember": "^5.0.3",
     "eslint-plugin-node": "^6.0.0",
     "loader.js": "^4.6.0",
+    "tslint": "^5.9.1",
     "typescript": "2.7.1"
   },
   "keywords": [

@@ -7,12 +7,12 @@ export function initialize(instance: any) { // The actual type of instance varie
 
   registry.register('debug-logger:main', debugLogger(), { instantiate: false });
 
-  ['route', 'component', 'controller', 'service'].forEach(function(type) {
+  ['route', 'component', 'controller', 'service'].forEach((type) => {
     inject.call(registry, type, 'debug', 'debug-logger:main');
   });
 }
 
 export default {
   name: 'debug-logger',
-  initialize: initialize
+  initialize,
 };

@@ -1,10 +1,9 @@
-import Service from '@ember/service';
 import Route from '@ember/routing/route';
-import { getOwner } from '@ember/application';
-import sinon, { SinonStub } from 'sinon';
-import { test } from 'qunit';
+import Service from '@ember/service';
 import moduleForAcceptance from 'dummy/tests/helpers/module-for-acceptance';
 import { TestContext } from 'ember-test-helpers';
+import { test } from 'qunit';
+import sinon, { SinonStub } from 'sinon';
 
 let log: SinonStub;
 
@@ -20,7 +19,7 @@ moduleForAcceptance('Acceptance | logging from container-managed objects', {
   afterEach() {
     log.restore();
     debug.disable();
-  }
+  },
 });
 
 test('it automatically finds keys when attached to container-managed objects', function(assert) {
