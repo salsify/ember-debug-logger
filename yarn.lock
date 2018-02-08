@@ -2259,7 +2259,7 @@ ember-cli-test-loader@^2.2.0:
 
 ember-cli-typescript@typed-ember/ember-cli-typescript#addon-support:
   version "1.0.6"
-  resolved "https://codeload.github.com/typed-ember/ember-cli-typescript/tar.gz/dfc6d31f267abc2554664f5e5ebc5661b5d3751d"
+  resolved "https://codeload.github.com/typed-ember/ember-cli-typescript/tar.gz/83db329c4b5df173e5da0e68e03314408ebb0c63"
   dependencies:
     broccoli-debug "^0.6.4"
     broccoli-funnel "^2.0.1"
