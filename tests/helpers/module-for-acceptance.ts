@@ -2,10 +2,11 @@ import { module } from 'qunit';
 import { resolve } from 'rsvp';
 import startApp from '../helpers/start-app';
 import destroyApp from '../helpers/destroy-app';
+import { TestContext } from 'ember-test-helpers';
 
-export default function(name, options = {}) {
+export default function(name: string, options: Hooks = {}) {
   module(name, {
-    beforeEach() {
+    beforeEach(this: TestContext) {
       this.application = startApp();
 
       if (options.beforeEach) {
@@ -13,7 +14,7 @@ export default function(name, options = {}) {
       }
     },
 
-    afterEach() {
+    afterEach(this: TestContext) {
       let afterEach = options.afterEach && options.afterEach.apply(this, arguments);
       return resolve(afterEach).then(() => destroyApp(this.application));
     }

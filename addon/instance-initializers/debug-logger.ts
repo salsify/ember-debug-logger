@@ -1,6 +1,6 @@
 import debugLogger from 'ember-debug-logger/utils/debug-logger';
 
-export function initialize(instance) {
+export function initialize(instance: any) { // The actual type of instance varies across Ember versions
   // In 1.13, the app instance exposes the registry; in 2.x, it proxies it instead
   let registry = instance.register ? instance : instance.registry;
   let inject = registry.inject || registry.injection;

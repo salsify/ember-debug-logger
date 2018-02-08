@@ -1,21 +1,19 @@
-/* global debug */
-/* eslint no-console:off */
-
 import { A } from '@ember/array';
-
-import sinon from 'sinon';
+import sinon, { SinonStub } from 'sinon';
 import debugLogger from 'ember-debug-logger';
 import { module, test } from 'qunit';
+
+let log: SinonStub;
 
 module('Unit | Utility | debug logger', {
   beforeEach() {
     debug.enable('test:sample-key');
-    sinon.stub(console, 'log');
+    log = sinon.stub(console, 'log');
   },
 
   afterEach() {
     debug.disable();
-    console.log.restore();
+    log.restore();
   }
 });
 
@@ -23,7 +21,7 @@ test('it honors an explicit key', function(assert) {
   const logger = debugLogger('test:sample-key');
   logger('placeholder message');
 
-  let [message] = A(console.log.args).get('lastObject');
+  let [message] = A(log.args).get('lastObject') || [''];
   assert.ok(/test:sample-key/.test(message), 'Log entry should contain the namespace');
   assert.ok(/placeholder message/.test(message), 'Log entry should contain the message');
 });
