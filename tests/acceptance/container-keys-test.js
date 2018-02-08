@@ -1,12 +1,12 @@
 /* global debug */
 /* eslint no-console:off */
 
-import Ember from 'ember';
+import Service from '@ember/service';
+
+import Route from '@ember/routing/route';
 import sinon from 'sinon';
 import { test } from 'qunit';
 import moduleForAcceptance from 'dummy/tests/helpers/module-for-acceptance';
-
-const { Service, Route } = Ember;
 
 moduleForAcceptance('Acceptance | logging from container-managed objects', {
   beforeEach: function() {

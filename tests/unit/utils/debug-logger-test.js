@@ -1,12 +1,11 @@
 /* global debug */
 /* eslint no-console:off */
 
-import Ember from 'ember';
+import { A } from '@ember/array';
+
 import sinon from 'sinon';
 import debugLogger from 'ember-debug-logger';
 import { module, test } from 'qunit';
-
-const { A } = Ember;
 
 module('Unit | Utility | debug logger', {
   beforeEach() {
