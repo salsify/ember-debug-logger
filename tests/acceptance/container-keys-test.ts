@@ -1,5 +1,6 @@
 import Service from '@ember/service';
 import Route from '@ember/routing/route';
+import { getOwner } from '@ember/application';
 import sinon, { SinonStub } from 'sinon';
 import { test } from 'qunit';
 import moduleForAcceptance from 'dummy/tests/helpers/module-for-acceptance';
@@ -23,16 +24,18 @@ moduleForAcceptance('Acceptance | logging from container-managed objects', {
 });
 
 test('it automatically finds keys when attached to container-managed objects', function(assert) {
+  let lookup = (key: string) => (this.application as any).__container__.lookup(key);
+
   visit('/');
 
   andThen(() => {
-    const appRoute = this.owner.lookup('route:application');
+    const appRoute = lookup('route:application');
     appRoute.debug('test message from the application route');
 
     let [routeMessage] = log.lastCall.args;
     assert.ok(/route:application/.test(routeMessage), 'Route message should include its container key');
 
-    const testService = this.owner.lookup('service:my/test/module');
+    const testService = lookup('service:my/test/module');
     testService.debug('test message from the mysterious service');
 
     let [serviceMessage] = log.lastCall.args;

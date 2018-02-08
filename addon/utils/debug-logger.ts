@@ -19,7 +19,7 @@ export default function debugLogger(key?: string): (formatter: any, ...args: any
   return key ? debug(key) : instanceLogger;
 }
 
-export function instanceLogger(this: HasLoggerInstance | undefined) {
+export function instanceLogger(this: LoggerContext | undefined) {
   let host = this;
   let logger = host && host._debugLoggerInstance;
 
@@ -41,7 +41,7 @@ declare global {
   const debug: IDebug;
 }
 
-interface HasLoggerInstance {
+export interface LoggerContext {
   _debugLoggerInstance?: IDebugger;
   _debugContainerKey?: string;
 }

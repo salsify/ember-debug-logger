@@ -1140,7 +1140,7 @@ broccoli-config-replace@^1.1.2:
     debug "^2.2.0"
     fs-extra "^0.24.0"
 
-broccoli-debug@^0.6.1, broccoli-debug@^0.6.3:
+broccoli-debug@^0.6.1, broccoli-debug@^0.6.3, broccoli-debug@^0.6.4:
   version "0.6.4"
   resolved "https://registry.yarnpkg.com/broccoli-debug/-/broccoli-debug-0.6.4.tgz#986eb3d2005e00e3bb91f9d0a10ab137210cd150"
   dependencies:
@@ -1211,25 +1211,6 @@ broccoli-funnel@^1.0.0, broccoli-funnel@^1.0.1, broccoli-funnel@^1.1.0:
     symlink-or-copy "^1.0.0"
     walk-sync "^0.3.1"
 
-broccoli-funnel@^1.0.6:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/broccoli-funnel/-/broccoli-funnel-1.2.0.tgz#cddc3afc5ff1685a8023488fff74ce6fb5a51296"
-  dependencies:
-    array-equal "^1.0.0"
-    blank-object "^1.0.1"
-    broccoli-plugin "^1.3.0"
-    debug "^2.2.0"
-    exists-sync "0.0.4"
-    fast-ordered-set "^1.0.0"
-    fs-tree-diff "^0.5.3"
-    heimdalljs "^0.2.0"
-    minimatch "^3.0.0"
-    mkdirp "^0.5.0"
-    path-posix "^1.0.0"
-    rimraf "^2.4.3"
-    symlink-or-copy "^1.0.0"
-    walk-sync "^0.3.1"
-
 broccoli-funnel@^2.0.0, broccoli-funnel@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/broccoli-funnel/-/broccoli-funnel-2.0.1.tgz#6823c73b675ef78fffa7ab800f083e768b51d449"
@@ -1277,19 +1258,6 @@ broccoli-lint-eslint@^4.2.1:
 broccoli-merge-trees@^1.0.0, broccoli-merge-trees@^1.1.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/broccoli-merge-trees/-/broccoli-merge-trees-1.2.1.tgz#16a7494ed56dbe61611f6c2d4817cfbaad2a3055"
-  dependencies:
-    broccoli-plugin "^1.3.0"
-    can-symlink "^1.0.0"
-    fast-ordered-set "^1.0.2"
-    fs-tree-diff "^0.5.4"
-    heimdalljs "^0.2.1"
-    heimdalljs-logger "^0.1.7"
-    rimraf "^2.4.3"
-    symlink-or-copy "^1.0.0"
-
-broccoli-merge-trees@^1.1.4:
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/broccoli-merge-trees/-/broccoli-merge-trees-1.2.4.tgz#a001519bb5067f06589d91afa2942445a2d0fdb5"
   dependencies:
     broccoli-plugin "^1.3.0"
     can-symlink "^1.0.0"
@@ -2287,20 +2255,26 @@ ember-cli-test-loader@^2.2.0:
 
 ember-cli-typescript@typed-ember/ember-cli-typescript#addon-support:
   version "1.0.6"
-  resolved "https://codeload.github.com/typed-ember/ember-cli-typescript/tar.gz/0e8c6a5625fce8ee27122ac13be4defe3c0e409c"
+  resolved "https://codeload.github.com/typed-ember/ember-cli-typescript/tar.gz/dfc6d31f267abc2554664f5e5ebc5661b5d3751d"
   dependencies:
-    broccoli-debug "^0.6.3"
-    broccoli-funnel "^1.0.6"
-    broccoli-merge-trees "^1.1.4"
+    broccoli-debug "^0.6.4"
+    broccoli-funnel "^2.0.1"
+    broccoli-merge-trees "^2.0.0"
     broccoli-plugin "^1.2.1"
     broccoli-stew "^1.4.0"
-    debug "^2.2.0"
+    debug "^3.1.0"
+    ember-cli-path-utils "^1.0.0"
+    ember-cli-string-utils "^1.1.0"
     execa "^0.9.0"
+    exists-sync "^0.0.4"
+    inflection "^1.12.0"
     mkdirp "^0.5.1"
     resolve "^1.5.0"
     rimraf "^2.6.2"
     rsvp "^4.8.1"
+    silent-error "^1.1.0"
     symlink-or-copy "^1.1.8"
+    walk-sync "^0.3.2"
 
 ember-cli-uglify@^2.0.0:
   version "2.0.0"
@@ -2780,7 +2754,7 @@ exists-sync@0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/exists-sync/-/exists-sync-0.0.3.tgz#b910000bedbb113b378b82f5f5a7638107622dcf"
 
-exists-sync@0.0.4:
+exists-sync@0.0.4, exists-sync@^0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/exists-sync/-/exists-sync-0.0.4.tgz#9744c2c428cc03b01060db454d4b12f0ef3c8879"
 

@@ -24,6 +24,7 @@
   "author": "Dan Freeman",
   "license": "MIT",
   "devDependencies": {
+    "@types/ember": "*",
     "@types/ember-qunit": "^3.0.1",
     "@types/ember-testing-helpers": "^0.0.3",
     "@types/qunit": "^2.0.31",
@@ -55,7 +56,6 @@
   ],
   "dependencies": {
     "@types/debug": "*",
-    "@types/ember": "*",
     "debug-dist": "^2.6.1",
     "ember-cli-babel": "^6.11.0",
     "ember-cli-node-assets": "^0.2.2"
