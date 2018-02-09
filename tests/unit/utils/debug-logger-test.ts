@@ -1,4 +1,5 @@
 import { A } from '@ember/array';
+import debug from 'debug';
 import debugLogger from 'ember-debug-logger';
 import { module, test } from 'qunit';
 import sinon, { SinonStub } from 'sinon';

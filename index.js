@@ -4,19 +4,17 @@
 module.exports = {
   name: 'ember-debug-logger',
 
-  init: function() {
-    this._super.init && this._super.init.apply(this, arguments);
-
-    var bowerDeps = this.project.bowerDependencies();
-    if (bowerDeps['visionmedia-debug']) {
-      this.ui.writeWarnLine('ember-debug-logger no longer requires the `visionmedia-debug` Bower package; please remove it.');
-    }
+  included() {
+    this._super.included.apply(this, arguments);
+    this.import('vendor/debug-dist/dist/debug.js', {
+      using: [{ transformation: 'amd', as: 'debug' }]
+    });
   },
 
   options: {
     nodeAssets: {
       'debug-dist': {
-        import: ['dist/debug.js']
+        vendor: ['dist/debug.js']
       }
     }
   }

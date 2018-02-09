@@ -1,4 +1,4 @@
-import { IDebug, IDebugger } from 'debug';
+import debug, { IDebugger } from 'debug';
 
 /**
  * Creates a function for debug logging, keyed by either an explicitly-given
@@ -37,11 +37,12 @@ export function instanceLogger(this: LoggerContext | undefined) {
   return logger.apply(this, arguments);
 }
 
-declare global {
-  const debug: IDebug;
-}
-
 export interface LoggerContext {
   _debugLoggerInstance?: IDebugger;
   _debugContainerKey?: string;
 }
+
+// For backwards compatibility and convenience in development, expose
+// `debug` as a global to make e.g. `debug.enable('*')` easy.
+// @ts-ignore
+window.debug = debug;

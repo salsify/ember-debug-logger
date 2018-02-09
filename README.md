@@ -1,12 +1,24 @@
 # ember-debug-logger [![Build Status](https://travis-ci.org/salsify/ember-debug-logger.svg?branch=master)](https://travis-ci.org/salsify/ember-debug-logger)
 
-`ember-debug-logger` exposes the [visionmedia/debug](//github.com/visionmedia/debug) library for use in your Ember.js application.
+`ember-debug-logger` exposes the [visionmedia/debug](https://github.com/visionmedia/debug) library for use in your Ember.js application.
 
 ## Installation
 
 `ember install ember-debug-logger`
 
 ## Usage
+
+The [debug library](https://github.com/visionmedia/debug) is available for standard use by import:
+
+```js
+import debug from 'debug';
+
+const log = debug('demo-namespace');
+
+log('Hello, world');
+```
+
+![image](https://cloud.githubusercontent.com/assets/108688/8261895/117445f0-169c-11e5-913e-941e82dd2a52.png)
 
 ### Enabling Namespaces During Debugging
 
@@ -46,10 +58,10 @@ Namespaces will automatically be differentiated by color, and the time between m
 By default, this addon will inject a `debug` method on to all routes, components, controllers, and services that are instantiated by your application's container. This method will automatically use its instance's container key as the namespace.
 
 ```js
-// index/route.js
-import Ember from 'ember';
+// app/routes/index.js
+import Route from '@ember/route';
 
-export default Ember.Route.extend({
+export default Route.extend({
   activate() {
     this.debug('Hello from the application index.');
   }
@@ -62,31 +74,18 @@ export default Ember.Route.extend({
 You can also manually add the method when defining any other class that will be instantiated by the container.
 
 ```js
-import Ember from 'ember';
+// app/adapters/application.js
 import DS from 'ember-data';
 import debugLogger from 'ember-debug-logger';
 
-export default DS.RESTAdapter.extend({
+export default DS.JSONAPIAdapter.extend({
   debug: debugLogger(),
-  
-  _sayHi: Ember.on('init', function() {
+
+  init() {
+    this._super(...arguments);
     this.debug('Hello from the application adapter!');
-  })
+  }
 });
 ```
 
 ![image](https://cloud.githubusercontent.com/assets/108688/8262918/52e85f82-16a4-11e5-9b00-22e95e3848ae.png)
-
-
-### Manual Namespacing
-
-If you want to log debug messages from anywhere other than a container-managed object, you can manually specify a namespace in the same way you would with the [underlying `debug` library](//github.com/visionmedia/debug).
-
-```js
-import debugLogger from 'ember-debug-logger';
-const debug = debugLogger('demo-namespace');
-
-debug('Hello, world');
-```
-
-![image](https://cloud.githubusercontent.com/assets/108688/8261895/117445f0-169c-11e5-913e-941e82dd2a52.png)

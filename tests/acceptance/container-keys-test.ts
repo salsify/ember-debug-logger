@@ -1,5 +1,6 @@
 import Route from '@ember/routing/route';
 import Service from '@ember/service';
+import debug from 'debug';
 import moduleForAcceptance from 'dummy/tests/helpers/module-for-acceptance';
 import { TestContext } from 'ember-test-helpers';
 import { test } from 'qunit';
