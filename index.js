@@ -2,7 +2,7 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-debug-logger',
+  name: require('./package').name,
 
   included() {
     this._super.included.apply(this, arguments);

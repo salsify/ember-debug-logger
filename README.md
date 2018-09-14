@@ -2,7 +2,8 @@
 
 `ember-debug-logger` exposes the [visionmedia/debug](https://github.com/visionmedia/debug) library for use in your Ember.js application.
 
-## Installation
+Installation
+------------------------------------------------------------------------------
 
 `ember install ember-debug-logger`
 
