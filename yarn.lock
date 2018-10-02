@@ -159,9 +159,9 @@
   integrity sha512-J7+MkDbUl/Sb57OuniuvVr4HLlHV2ub2y31HmD9QiepLEMj0zGIv4hbyOfGHTKWCcU0r7lxcDdHdLyUjpuL21w==
 
 "@types/jquery@*":
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.3.0.tgz#6316ac20a1a13c5d521a2dc661befc7184f73f5b"
-  integrity sha512-szaKV2OQgwxYTGTY6qd9eeBfGGCaP7n2OGit4JdbOcfGgc9VWjfhMhnu5AVNhIAu8WWDIB36q9dfPVba1fGeIQ==
+  version "3.3.10"
+  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.3.10.tgz#d0afaec7ee55f591992e74c607df5dc7cd9c76ab"
+  integrity sha512-W2bE8pGh9Tsg8mxh+B6BSH8lTG6ZV7K2ZMAlEwSTqKFU1wMI5HShyRKSp3DngnxCmDu35tW3RAC4mxBFYRsTuw==
 
 "@types/qunit@^2.0.31":
   version "2.0.31"
