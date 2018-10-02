@@ -56,13 +56,16 @@ Namespaces will automatically be differentiated by color, and the time between m
 
 ### Automatic Namespacing
 
-By default, this addon will inject a `debug` method on to all routes, components, controllers, and services that are instantiated by your application's container. This method will automatically use its instance's container key as the namespace.
+This addon exports a `debugLogger` function you can attach to a class definition. The resulting method will automatically use its instance's container key as the namespace.
 
 ```js
 // app/routes/index.js
 import Route from '@ember/route';
+import debugLogger from 'ember-debug-logger';
 
 export default Route.extend({
+  debug: debugLogger();
+
   activate() {
     this.debug('Hello from the application index.');
   }
@@ -70,23 +73,3 @@ export default Route.extend({
 ```
 
 ![image](https://cloud.githubusercontent.com/assets/108688/8262107/e0e71bb8-169d-11e5-9b74-9a895ed7e418.png)
-
-
-You can also manually add the method when defining any other class that will be instantiated by the container.
-
-```js
-// app/adapters/application.js
-import DS from 'ember-data';
-import debugLogger from 'ember-debug-logger';
-
-export default DS.JSONAPIAdapter.extend({
-  debug: debugLogger(),
-
-  init() {
-    this._super(...arguments);
-    this.debug('Hello from the application adapter!');
-  }
-});
-```
-
-![image](https://cloud.githubusercontent.com/assets/108688/8262918/52e85f82-16a4-11e5-9b00-22e95e3848ae.png)

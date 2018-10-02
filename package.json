@@ -18,8 +18,8 @@
   "devDependencies": {
     "@ember/optional-features": "^0.6.3",
     "@types/ember": "*",
-    "@types/ember-qunit": "^3.0.1",
-    "@types/ember-testing-helpers": "^0.0.3",
+    "@types/ember-qunit": "^3.4.2",
+    "@types/ember__test-helpers": "^0.7.5",
     "@types/qunit": "^2.0.31",
     "@types/rsvp": "^4.0.1",
     "@types/sinon": "^4.1.3",
