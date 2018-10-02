@@ -5,10 +5,9 @@
   "scripts": {
     "build": "ember build",
     "lint:hbs": "ember-template-lint .",
-    "lint:js": "eslint .",
+    "lint:js": "eslint . --ext js,ts",
     "start": "ember server",
     "test": "ember test",
-    "lint:ts": "tslint -p tsconfig.json -c tslint.json --exclude '**/*.js'",
     "prepublishOnly": "ember ts:precompile",
     "postpublish": "ember ts:clean",
     "test:all": "ember try:each"
@@ -47,8 +46,8 @@
     "eslint-plugin-node": "^7.0.1",
     "loader.js": "^4.7.0",
     "qunit-dom": "^0.7.1",
-    "tslint": "^5.9.1",
-    "typescript": "2.7.1"
+    "typescript": "~3.0.1",
+    "typescript-eslint-parser": "^19.0.2"
   },
   "keywords": [
     "ember-addon"
