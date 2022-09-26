@@ -47,7 +47,8 @@
     "loader.js": "^4.7.0",
     "qunit-dom": "^0.7.1",
     "typescript": "~3.0.1",
-    "typescript-eslint-parser": "^19.0.2"
+    "typescript-eslint-parser": "^19.0.2",
+    "webpack": "^5.74.0"
   },
   "keywords": [
     "ember-addon"
