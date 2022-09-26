@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
 ## Unreleased
 
+Upgrade to ember-auto-import 2.x
+
 ## v2.1.1 - 04/09/2019
 
 This release fixes a bug introduced in `v2.1.0` — `debug@4` contains ES6 syntax that breaks compatibility with IE11. We now lock our `debug` dependency below version 4.
